@@ -1,0 +1,21 @@
+<form {{action 'signup' on='submit'}}>
+
+  {{#if validationErrors}}
+    <ul>
+      {{#each error in validationErrors}}
+        <li>{{error}}</li>
+      {{/each}}
+    </ul>
+  {{/if}}
+
+  <label for="email">Email</label>
+  {{input value=model.email placeholder='some@email.com'}}
+
+  <label for="password">Password</label>
+  {{input value=model.password placeholder='verySecurePassword'}}
+
+  <label for="passwordConfirmation">Password Confirmation</label>
+  {{input value=model.passwordConfirmation placeholder='verySecurePasswordAgain'}}
+
+  <button type="submit">Sign up</button>
+</form>

@@ -19,6 +19,16 @@ module.exports = function(environment) {
     }
   };
 
+  ENV['simple-auth'] = {
+    authorizer: 'simple-auth-authorizer:devise',
+    // crossOriginWhitelist: ['http://localhost:3000']
+  };
+
+  ENV['simple-auth-devise'] = {
+    resourceName: 'user',
+    identificationAttributeName: 'email'
+  };
+
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
