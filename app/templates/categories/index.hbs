@@ -1,0 +1,10 @@
+<div class="row">
+  <div class="large-12 columns">
+    {{#link-to 'categories.new'}}New Category{{/link-to}}
+    <ul>
+      {{#each category in model}}
+        {{dashboard-chart category=category}}
+      {{/each}}
+    </ul>
+  </div>
+</div>

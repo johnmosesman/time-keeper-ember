@@ -1,5 +1,4 @@
 <form {{action 'signup' on='submit'}}>
-
   {{#if validationErrors}}
     <ul>
       {{#each error in validationErrors}}
@@ -12,10 +11,10 @@
   {{input value=model.email placeholder='some@email.com'}}
 
   <label for="password">Password</label>
-  {{input value=model.password placeholder='verySecurePassword'}}
+  {{input value=model.password placeholder='verySecurePassword' type='password'}}
 
   <label for="passwordConfirmation">Password Confirmation</label>
-  {{input value=model.passwordConfirmation placeholder='verySecurePasswordAgain'}}
+  {{input value=model.passwordConfirmation placeholder='verySecurePasswordAgain' type='password'}}
 
   <button type="submit">Sign up</button>
 </form>

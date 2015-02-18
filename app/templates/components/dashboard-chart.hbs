@@ -1,0 +1,7 @@
+<li>
+  {{category.title}}
+  |
+  {{category.amount}}
+  {{#link-to 'categories.edit' category}}{{fa-icon "edit"}}{{/link-to}}
+  <a href="#" {{action "delete" category}}>{{fa-icon "trash"}}</a>
+</li>

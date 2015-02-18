@@ -8,7 +8,11 @@ var Router = Ember.Router.extend({
 Router.map(function() {
   this.route("login");
   this.route("signup");
-  this.route("dashboard", {path: '/'});
+  this.resource("categories", {path: '/'}, function() {
+    this.route("new", {path: '/categories/new'});
+    this.route("edit", {path: 'categories/:category_id/edit'});
+  });
+  this.route("input");
 });
 
 export default Router;

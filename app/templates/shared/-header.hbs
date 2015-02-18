@@ -1,5 +1,15 @@
-{{#if session.isAuthenticated}}
-  <a {{ action 'invalidateSession' }}>Logout</a>
-{{else}}
-  {{#link-to 'login'}}Login{{/link-to}}
-{{/if}}
+<div class="row">
+  <div class="large-12 columns">
+    {{#if session.isAuthenticated}}
+      <span>{{session.content.email}}</span>
+      |
+      <span>{{#link-to 'categories.index'}}Dashboard{{/link-to}}</span>
+      |
+      <span>{{#link-to 'input'}}Input{{/link-to}}</span>
+      |
+      <a {{action 'invalidateSession'}}>Logout</a>
+    {{else}}
+      {{#link-to 'login'}}Login{{/link-to}}
+    {{/if}}
+  </div>
+</div>

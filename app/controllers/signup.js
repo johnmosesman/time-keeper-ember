@@ -46,7 +46,7 @@ export default Ember.Controller.extend({
           "password": registration.get('password')
         }
       },
-      success: function(data) {
+      success: function() {
         _this.get('session').authenticate('simple-auth-authenticator:devise', {
           identification: registration.get('email'),
           password: registration.get('password')
