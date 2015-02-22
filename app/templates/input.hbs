@@ -1,1 +1,14 @@
-{{outlet}}
+<table>
+  <thead>
+
+  </thead>
+  <tbody>
+    {{#each category in model}}
+      <tr>
+        <td>{{category.title}}</td>
+        <td>{{category.amount}}</td>
+        <td>{{record-input store=store category=category}}</td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

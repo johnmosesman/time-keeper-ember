@@ -5,7 +5,7 @@ export default DS.Model.extend(EmberValidations.Mixin, {
   title: DS.attr('string'),
   amount: DS.attr('number'),
 
-  records: DS.hasMany('record'),
+  records: DS.hasMany('record', {async: true}),
 
   validations: {
     title: {
