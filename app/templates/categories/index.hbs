@@ -2,8 +2,14 @@
   <div class="large-12 columns">
     {{#link-to 'categories.new'}}New Category{{/link-to}}
     <ul>
-      {{#each category in model}}
-        {{dashboard-chart category=category}}
+      {{#each category in model itemController="categories.show"}}
+        <li>
+          {{category.model.title}}
+          |
+          {{category.model.amount}}
+          {{#link-to 'categories.edit' category.model}}{{fa-icon "edit"}}{{/link-to}}
+          <a href="#" {{action "delete"}}>{{fa-icon "trash"}}</a>
+        </li>
       {{/each}}
     </ul>
   </div>

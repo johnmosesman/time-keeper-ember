@@ -3,7 +3,9 @@
     {{#if session.isAuthenticated}}
       <span>{{session.content.email}}</span>
       |
-      <span>{{#link-to 'categories.index'}}Dashboard{{/link-to}}</span>
+      <span>{{#link-to 'dashboard'}}Dashboard{{/link-to}}</span>
+      |
+      <span>{{#link-to 'categories.index'}}Categories{{/link-to}}</span>
       |
       <span>{{#link-to 'input'}}Input{{/link-to}}</span>
       |
