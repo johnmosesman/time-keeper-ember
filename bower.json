@@ -15,5 +15,8 @@
     "qunit": "~1.17.1",
     "ember-simple-auth": "0.7.3",
     "foundation": "~5.5.0"
+  },
+  "resolutions": {
+    "jquery": "^1.11.1"
   }
 }
