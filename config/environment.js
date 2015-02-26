@@ -52,8 +52,8 @@ module.exports = function(environment) {
 
   if (environment === 'production') {
     ENV['simple-auth-devise'] = {
-      serverTokenEndpoint: 'https://time-keeper.herokuapp.com/users/sign_in',
-      crossOriginWhitelist: ['https://time-keeper.herokuapp.com/']
+      serverTokenEndpoint: 'http://time-keeper.herokuapp.com/users/sign_in',
+      crossOriginWhitelist: ['http://time-keeper.herokuapp.com/']
     };
   }
 
