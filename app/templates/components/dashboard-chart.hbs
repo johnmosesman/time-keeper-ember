@@ -1,0 +1,19 @@
+<div class="dashboard-chart">
+  <div class="text-center">
+    <h3>{{chart.title}}</h3>
+  </div>
+
+  <div class="chart-container">
+    {{ember-chart type="Bar" data=chart.data options=options}}
+  </div>
+
+  <div class="row">
+    <div class="large-6 columns">
+      <p>{{chart.average}}hrs avg.</p>
+    </div>
+
+    <div class="large-6 columns">
+      <p>Success: {{chart.success_percentage}}</p>
+    </div>
+  </div>
+</div>

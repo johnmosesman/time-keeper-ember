@@ -1,0 +1,9 @@
+<div class="row">
+  <div class="large-12 columns">
+    <ul class="small-block-grid-2 medium-block-grid-2 large-block-grid-3">
+      {{#each chart in model.charts}}
+        <li>{{dashboard-chart chart=chart}}</li>
+      {{/each}}
+    </ul>
+  </div>
+</div>
