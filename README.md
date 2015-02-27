@@ -1,5 +1,11 @@
 # Time-keeper-ember
 
+This is an app I'm building on occasionally to track the amount of time spent each day for various categories (sleeping, reading, working out, etc.). I'm using it as a way to learn more about Ember, Rails, Ember Simple Auth, and Chartjs.
+
+This is the Ember portion of this app, the Rails side [is here.](https://github.com/johnmosesman/time-keeper)
+
+# Generic Ember CLI instructions
+
 This README outlines the details of collaborating on this Ember application.
 A short introduction of this app could easily go here.
 
