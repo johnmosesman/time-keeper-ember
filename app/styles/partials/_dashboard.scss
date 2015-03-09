@@ -1,21 +1,60 @@
-$gray-super-lightest: #f7f7f7;
-$gray-lightest: #f1f1f3;
-$gray-lighter: #e1e1e3;
-$gray-light: #a5a6aa;
-$gray: #6c6d73;
-$gray-dark: #494a4e;
-$gray-darker: #313234;
-$gray-darkest: #1d1d1f;
-
-$border-radius: 2px;
-
 .dashboard-chart {
   border: 1px solid $gray-lighter;
   border-radius: $border-radius;
   padding: 1rem;
 
-  canvas {
-    width: 100% !important;
-    height: auto !important;
+  // canvas {
+  //   width: 100% !important;
+  //   height: auto !important;
+  // }
+
+  h3 {
+    color: $gray;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+  .amount {
+    font-size: 2rem;
+    color: $gray;
+  }
+
+  .hours {
+    font-size: 0.75rem;
+    color: $gray;
+    margin-left: -0.2rem;
+  }
+
+  .subtext {
+    display: block;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    color: $gray-light;
+    margin-top: -0.5rem;
+  }
+
+  .excellent {
+    span {
+      color: $green;
+    }
+  }
+
+  .good {
+    span {
+      color: $green;
+    }
+  }
+
+  .average {
+    span {
+      color: $yellow;
+    }
+  }
+
+  .poor {
+    span {
+      color: $red;
+    }
   }
 }

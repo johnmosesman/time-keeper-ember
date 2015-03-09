@@ -3,17 +3,38 @@
     <h3>{{chart.title}}</h3>
   </div>
 
-  <div class="chart-container">
-    {{ember-chart type="Line" data=chart.data options=chart.options}}
+  <div class="row text-center">
+    <div class="large-12 columns">
+      {{ember-chart type="Line" data=chart.data options=chart.options}}
+    </div>
   </div>
 
-  <div class="row">
-    <div class="large-6 columns">
-      <p>{{chart.average}}hrs avg.</p>
+  <div class="row text-center">
+    <div class="small-4 columns">
+      <div>
+        <span class="amount">{{chart.goal.data}}</span>
+        <span class="hours">h</span>
+      </div>
+
+      <span class="subtext">goal</span>
     </div>
 
-    <div class="large-6 columns">
-      <p>Success: {{chart.success_percentage}}</p>
+    <div class="small-4 columns">
+      <div {{bind-attr class="chart.average.level"}}>
+        <span class="amount">{{chart.average.data}}</span>
+        <span class="hours">h</span>
+      </div>
+
+      <span class="subtext">average</span>
+    </div>
+
+    <div class="small-4 columns">
+      <div {{bind-attr class="chart.success.level"}}>
+        <span class="amount">{{chart.success.data}}</span>
+        <span class="hours">%</span>
+      </div>
+
+      <span class="subtext">success</span>
     </div>
   </div>
 </div>
