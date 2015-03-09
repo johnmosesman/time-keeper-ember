@@ -50,17 +50,15 @@ http {
       auth_basic_user_file <%= "#{ENV["HOME"]}/config/htpasswd" %>;
     <% end %>
 
-    <% if ENV["API_URL"] %>
-      location <%= ENV["API_PREFIX_PATH"] || "/api/" %> {
-        proxy_pass <%= ENV["API_URL"] %>;
-        proxy_set_header Real-IP $remote_addr;
-        proxy_set_header Forwarded-For $proxy_add_x_forwarded_for;
-        proxy_set_header NginX-Proxy true;
-        proxy_ssl_session_reuse off;
-        proxy_redirect off;
-        <% if ENV["NGINX_DEBUG"] %>add_header Ember-Cli-Proxy on;<% end %>
-      }
-    <% end %>
+    location "/api/" {
+      proxy_pass "https://time-keeper.herokuapp.com/";
+      proxy_set_header Real-IP $remote_addr;
+      proxy_set_header Forwarded-For $proxy_add_x_forwarded_for;
+      proxy_set_header NginX-Proxy true;
+      proxy_ssl_session_reuse off;
+      proxy_redirect off;
+      <% if ENV["NGINX_DEBUG"] %>add_header Ember-Cli-Proxy on;<% end %>
+    }
 
     <% if ENV["PRERENDER_HOST"] %>
       # Based on the official Prerender.io gist https://gist.github.com/thoop/8165802
