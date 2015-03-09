@@ -51,7 +51,7 @@ http {
     <% end %>
 
     location "/api/" {
-      proxy_pass "https://time-keeper.herokuapp.com/";
+      proxy_pass "https://time-keeper.herokuapp.com/api/";
       proxy_set_header Real-IP $remote_addr;
       proxy_set_header Forwarded-For $proxy_add_x_forwarded_for;
       proxy_set_header NginX-Proxy true;
