@@ -53,7 +53,6 @@ module.exports = function(environment) {
   if (environment === 'production') {
     ENV['simple-auth-devise']['serverTokenEndpoint'] = 'https://time-keeper.herokuapp.com/users/sign_in';
     ENV['simple-auth-devise']['crossOriginWhitelist'] = ['https://time-keeper.herokuapp.com/'];
-    ENV.host = 'https://time-keeper.herokuapp.com/';
   }
 
   return ENV;
